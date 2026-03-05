@@ -1,75 +1,26 @@
-# Nuxt Content Starter
+# grandanielcom
 
-Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
+Personal portfolio built with Nuxt 4.
 
-## Setup
+## Scripts
 
-Make sure to install dependencies:
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server on `http://localhost:3000` |
+| `npm run build` | Typecheck + lint + build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run `vue-tsc --noEmit` |
+| `npm run lint` | Run ESLint |
+| `npm test` | Run Vitest |
 
-```bash
-# npm
-npm install
+> `postinstall` automatically runs `nuxt prepare` after `npm install`.
 
-# pnpm
-pnpm install
+## Dependencies
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| Package | Type |
+|---|---|
+| `nuxt ^4.3.1` | dependency |
+| `@nuxt/eslint ^1.15.2` | devDependency |
+| `@nuxt/icon ^2.2.1` | devDependency |
+| `@nuxtjs/tailwindcss ^6.14.0` | devDependency |
+| `sass ^1.97.3` | devDependency |
