@@ -47,6 +47,25 @@
         :label="tag"
       />
     </div>
+    <div
+      v-if="link"
+      class="mt-3 pt-3 border-t border-gray-100"
+    >
+      <NuxtLink
+        :to="link"
+        class="inline-flex items-center gap-1 text-xs font-medium text-accent-600 hover:text-accent-800 transition-colors"
+      >
+        <Icon
+          name="mdi:file-document-outline"
+          class="w-3.5 h-3.5"
+        />
+        Zur Publikation
+        <Icon
+          name="mdi:arrow-right"
+          class="w-3 h-3"
+        />
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -58,5 +77,6 @@ defineProps<{
   icon?: string
   items?: string[]
   tags?: string[]
+  link?: string
 }>();
 </script>

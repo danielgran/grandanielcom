@@ -109,6 +109,7 @@ const navLinks = [
   { to: "/projects", label: "Projekte", icon: "mdi:folder-outline" },
   { to: "/achievements", label: "Erfolge", icon: "mdi:trophy-outline" },
   { to: "/hobbies", label: "Hobbys", icon: "mdi:heart-outline" },
+  { to: "/publications", label: "Publikationen", icon: "mdi:file-document-outline" },
   { to: "/contact", label: "Kontakt", icon: "mdi:chat-outline" },
 ];
 

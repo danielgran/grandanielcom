@@ -5,7 +5,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <ProjectCard
         title="Frameworkanalyse React"
-        subtitle="Bachelorarbeit"
+        subtitle="Bachelorarbeit · Note 1,1"
         icon="mdi:react"
         description="Extensives Lesen und Verstehen der React Rendering Engine. Performanceanalyse mittels praktischer Werkzeuge aus der Informatik (Zeitkomplexität, UX-Metriken)."
         :items="[
@@ -14,6 +14,7 @@
           'Einarbeitung in den Rahmen der JavaScript-Entwicklung',
         ]"
         :tags="['React', 'JavaScript', 'Performance', 'Forschung']"
+        link="/publications"
       />
       <ProjectCard
         title="Medikamentendosierer"

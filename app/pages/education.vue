@@ -4,6 +4,12 @@
 
     <ul class="timeline">
       <TimelineItem
+        title="M.Sc. (Fernstudium, Vollzeit)"
+        subtitle="IU Internationale Hochschule"
+        date="10/2024 – voraussichtlich 2027"
+        description="Master of Science im Fernstudium (Vollzeit)."
+      />
+      <TimelineItem
         title="B.Eng. Elektro- und Informationstechnik"
         subtitle="Technische Hochschule Nürnberg"
         date="08/2020 – 08/2024"
