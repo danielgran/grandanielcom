@@ -15,6 +15,19 @@ Personal portfolio built with Nuxt 4.
 
 > `postinstall` automatically runs `nuxt prepare` after `npm install`.
 
+## Skill Registry
+
+Skills are defined once in `app/data/skills.ts`. Each experience and project entry in `app/data/` declares `skillRefs` — a typed list of `{ skill, text }` pairs describing how the skill was used.
+
+On app startup a Nuxt plugin (`app/plugins/skill-references.ts`) pre-registers all references into a module-level store (`app/composables/skillStore.ts`). The `/skills` page resolves and displays only referenced skills grouped by category, with expandable panels linking back to the source entries.
+
+| File | Purpose |
+|---|---|
+| `app/data/skills.ts` | Skill definitions, `SkillTag` type, `SkillRef` interface |
+| `app/composables/skillStore.ts` | Singleton store — init, add, resolve |
+| `app/composables/useSkillReference.ts` | Composable wrapper for `addReference` |
+| `app/plugins/skill-references.ts` | Pre-registers all refs at startup |
+
 ## Dependencies
 
 | Package | Type |

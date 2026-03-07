@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-white border border-gray-100 rounded-xl p-6 hover:shadow-md transition-shadow">
+  <div
+    :id="id"
+    class="bg-white border border-gray-100 rounded-xl p-6 hover:shadow-md transition-shadow"
+  >
     <div class="flex items-start gap-3 mb-3">
       <div
         v-if="icon"
@@ -71,6 +74,7 @@
 
 <script setup lang="ts">
 defineProps<{
+  id?: string
   title: string
   subtitle?: string
   description?: string

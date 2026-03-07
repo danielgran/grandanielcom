@@ -1,5 +1,8 @@
 <template>
-  <li class="timeline-item">
+  <li
+    :id="id"
+    class="timeline-item"
+  >
     <div class="timeline-marker" />
     <div>
       <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
@@ -50,6 +53,7 @@
 
 <script setup lang="ts">
 defineProps<{
+  id?: string
   title: string
   subtitle?: string
   date?: string
