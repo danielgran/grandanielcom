@@ -10,8 +10,8 @@
           Hi, ich bin <span class="font-semibold">Daniel</span>
         </h2>
         <p class="text-gray-600 leading-relaxed">
-          Software Engineer und geprüfter Rettungssanitäter mit einem Bachelor of Engineering
-          in Elektro- und Informationstechnik. Ich verbinde einen starken Software-Engineering-Hintergrund
+          Software Engineer mit einem Bachelor of Engineering
+          in Elektro- und Informationstechnik. Ich verbinde einen starken Software + Engineering-Hintergrund
           mit praktischer Infrastrukturerfahrung — von CI/CD-Pipelines und Containerisierung bis hin
           zur Full-Stack-Webentwicklung mit Vue.js, TypeScript, Python und .NET.
         </p>
