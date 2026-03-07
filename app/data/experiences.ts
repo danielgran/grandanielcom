@@ -44,7 +44,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     title: "Rettungssanitäter im Rettungsdienst",
-    subtitle: "BRK Kreisverband Fürth",
+    subtitle: "BRK Kreisverband Fürth, Ehrenamtliche Aushilfe",
     date: "10/2022 – Heute",
     items: [
       "Lebensrettende Sofortmaßnahmen",
