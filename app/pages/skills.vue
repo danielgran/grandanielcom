@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { useSkillRegistry } from '~/composables/useSkillRegistry'
+import { useSkillRegistry } from "~/composables/useSkillRegistry";
 
-const { resolvedCategories } = useSkillRegistry()
+const { resolvedCategories } = useSkillRegistry();
 </script>

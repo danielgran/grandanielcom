@@ -1,12 +1,12 @@
-import { defineNuxtPlugin } from "#app"
-import { initializeSkillStore } from "~/composables/skillStore"
-import { useSkillReference } from "~/composables/useSkillReference"
-import { slugify } from "~/data/skills"
-import { experiences } from "~/data/experiences"
-import { projects } from "~/data/projects"
+import { defineNuxtPlugin } from "#app";
+import { initializeSkillStore } from "~/composables/skillStore";
+import { useSkillReference } from "~/composables/useSkillReference";
+import { slugify } from "~/data/skills";
+import { experiences } from "~/data/experiences";
+import { projects } from "~/data/projects";
 
 export default defineNuxtPlugin(() => {
-  initializeSkillStore()
+  initializeSkillStore();
 
   for (const exp of experiences) {
     for (const ref of exp.skillRefs) {
@@ -15,7 +15,7 @@ export default defineNuxtPlugin(() => {
         title: exp.title,
         text: ref.text,
         link: `/experience#${slugify(exp.title)}`,
-      })
+      });
     }
   }
 
@@ -26,7 +26,7 @@ export default defineNuxtPlugin(() => {
         title: proj.title,
         text: ref.text,
         link: `/projects#${slugify(proj.title)}`,
-      })
+      });
     }
   }
-})
+});

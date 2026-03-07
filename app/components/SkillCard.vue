@@ -85,18 +85,18 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
-import type { WorkSkill } from "~/types/WorkSkill"
+import { ref } from "vue";
+import type { WorkSkill } from "~/types/WorkSkill";
 
 const props = defineProps<{
   skill: WorkSkill
 }>();
 
-const expanded = ref(false)
+const expanded = ref(false);
 
 function toggle() {
   if (props.skill.hasReferences) {
-    expanded.value = !expanded.value
+    expanded.value = !expanded.value;
   }
 }
 </script>

@@ -1,6 +1,5 @@
-import { SkillCategory } from "~/types/WorkSkill"
-import { WorkSkill, type SkillReference } from "~/types/WorkSkill"
-import { skillCategories, type SkillCategoryDef } from "~/data/skills"
+import type { SkillCategory, WorkSkill, type SkillReference } from "~/types/WorkSkill";
+import { skillCategories, type SkillCategoryDef } from "~/data/skills";
 
 interface CategoryEntry {
   key: SkillCategory
@@ -8,19 +7,19 @@ interface CategoryEntry {
   skills: WorkSkill[]
 }
 
-let initialized = false
-const categoryMap: CategoryEntry[] = []
-const allSkills: WorkSkill[] = []
+let initialized = false;
+const categoryMap: CategoryEntry[] = [];
+const allSkills: WorkSkill[] = [];
 
 /** Creates WorkSkill instances from all defined skill categories. Called once by the plugin. */
 export function initializeSkillStore() {
-  if (initialized) return
-  initialized = true
+  if (initialized) return;
+  initialized = true;
 
   for (const cat of skillCategories as readonly SkillCategoryDef[]) {
-    const skills = cat.skills.map(s => new WorkSkill(s))
-    categoryMap.push({ key: cat.key, label: cat.label, skills })
-    allSkills.push(...skills)
+    const skills = cat.skills.map(s => new WorkSkill(s));
+    categoryMap.push({ key: cat.key, label: cat.label, skills });
+    allSkills.push(...skills);
   }
 }
 
@@ -28,7 +27,7 @@ export function initializeSkillStore() {
 export function addReference(tag: string, ref: SkillReference) {
   for (const skill of allSkills) {
     if (skill.matches(tag)) {
-      skill.addReference(ref)
+      skill.addReference(ref);
     }
   }
 }
@@ -47,5 +46,5 @@ export function getResolvedCategories(): ResolvedSkillCategory[] {
       label: cat.label,
       skills: cat.skills.filter(s => s.hasReferences),
     }))
-    .filter(cat => cat.skills.length > 0)
+    .filter(cat => cat.skills.length > 0);
 }

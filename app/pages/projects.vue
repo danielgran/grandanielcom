@@ -5,8 +5,8 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <ProjectCard
         v-for="proj in projects"
-        :key="proj.title"
         :id="slugify(proj.title)"
+        :key="proj.title"
         :title="proj.title"
         :subtitle="proj.subtitle"
         :icon="proj.icon"
@@ -20,6 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { projects } from '~/data/projects'
-import { slugify } from '~/data/skills'
+import { projects } from "~/data/projects";
+import { slugify } from "~/data/skills";
 </script>

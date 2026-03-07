@@ -5,8 +5,8 @@
     <ul class="timeline">
       <TimelineItem
         v-for="exp in experiences"
-        :key="exp.title"
         :id="slugify(exp.title)"
+        :key="exp.title"
         :title="exp.title"
         :subtitle="exp.subtitle"
         :date="exp.date"
@@ -18,6 +18,6 @@
 </template>
 
 <script setup lang="ts">
-import { experiences } from '~/data/experiences'
-import { slugify } from '~/data/skills'
+import { experiences } from "~/data/experiences";
+import { slugify } from "~/data/skills";
 </script>
