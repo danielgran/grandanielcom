@@ -8,8 +8,11 @@
       <div class="flex-1">
         <h2 class="text-xl lg:text-2xl font-light text-gray-800 mb-4">
           Hi, ich bin <span class="font-semibold">Daniel</span>
+          <span class="ml-3 inline-block text-sm text-gray-500 mb-4">
+            (a.k.a Bandi oder Dani)
+          </span>
         </h2>
-        <p class="text-gray-600 leading-relaxed">
+          <p class="text-gray-600 leading-relaxed">
           Software Engineer mit einem Bachelor of Engineering
           in Elektro- und Informationstechnik. Ich verbinde einen starken Software + Engineering-Hintergrund
           mit praktischer Infrastrukturerfahrung — von CI/CD-Pipelines und Containerisierung bis hin
