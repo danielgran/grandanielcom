@@ -1,4 +1,5 @@
-import type { SkillCategory, WorkSkill, type SkillReference } from "~/types/WorkSkill";
+import type { SkillCategory, SkillReference } from "~/types/WorkSkill";
+import { WorkSkill } from "~/types/WorkSkill";
 import { skillCategories, type SkillCategoryDef } from "~/data/skills";
 
 interface CategoryEntry {
