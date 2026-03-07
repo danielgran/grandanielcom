@@ -4,7 +4,7 @@
 
     <ul class="timeline">
       <TimelineItem
-        title="M.Sc. (Fernstudium, Vollzeit)"
+        title="M.Sc. Informatik (Fernstudium, Vollzeit)"
         subtitle="IU Internationale Hochschule"
         date="10/2024 – voraussichtlich 2027"
         description="Master of Science im Fernstudium (Vollzeit)."
