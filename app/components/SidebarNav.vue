@@ -63,7 +63,7 @@
         />
       </a>
       <a
-        href="https://github.com/grandaniel"
+        href="https://github.com/danielgran"
         target="_blank"
         rel="noopener"
         class="text-gray-400 hover:text-accent-600 transition-colors"

@@ -20,6 +20,9 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from "#app";
 import { projects } from "~/data/projects";
 import { slugify } from "~/data/skills";
+
+useHead({ title: "Projekte" });
 </script>

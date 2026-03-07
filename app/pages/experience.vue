@@ -18,6 +18,9 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from "#app";
 import { experiences } from "~/data/experiences";
 import { slugify } from "~/data/skills";
+
+useHead({ title: "Berufserfahrung" });
 </script>

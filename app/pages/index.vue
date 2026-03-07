@@ -82,3 +82,9 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useHead } from "#app";
+
+useHead({ title: "Personal Website" });
+</script>

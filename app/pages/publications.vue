@@ -58,7 +58,10 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from "#app";
 import { ref } from "vue";
+
+useHead({ title: "Publikationen" });
 
 interface Publication {
   title: string
