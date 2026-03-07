@@ -12,11 +12,12 @@
             (a.k.a Bandi oder Dani)
           </span>
         </h2>
-          <p class="text-gray-600 leading-relaxed">
-          Software Engineer mit einem Bachelor of Engineering
-          in Elektro- und Informationstechnik. Ich verbinde einen starken Software + Engineering-Hintergrund
-          mit praktischer Infrastrukturerfahrung — von CI/CD-Pipelines und Containerisierung bis hin
-          zur Full-Stack-Webentwicklung mit Vue.js, TypeScript, Python und .NET.
+        <p class="text-gray-600 leading-relaxed">
+          Software Engineer mit einem Bachelor of Engineering in Elektro- und
+          Informationstechnik. Ich verbinde einen starken Software +
+          Engineering-Hintergrund mit praktischer Infrastrukturerfahrung — von
+          CI/CD-Pipelines und Containerisierung bis hin zur
+          Full-Stack-Webentwicklung mit Vue.js, TypeScript, Python und .NET.
         </p>
       </div>
 
@@ -70,7 +71,9 @@
 
     <!-- Sprachen -->
     <div>
-      <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">Sprachen</h3>
+      <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-3">
+        Sprachen
+      </h3>
       <div class="flex flex-wrap gap-3">
         <div class="flex items-center gap-2 text-sm text-gray-600">
           <span class="font-medium">Deutsch</span>
