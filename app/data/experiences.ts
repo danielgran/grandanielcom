@@ -10,7 +10,7 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer (Full-Time)",
     subtitle: "Head-On Solutions GmbH, Nürnberg",
     date: "10/2024 – Heute",
     items: [
@@ -19,11 +19,30 @@ export const experiences: ExperienceItem[] = [
       "Projektmanagement und -koordination",
     ],
     skillRefs: [
-      { skill: "Vue.js", text: "Frontend-Entwicklung mit Vue 3 Composition API" },
+      {
+        skill: "Projektmanagement",
+        text: "Planung und Verantwortung von eigenen Entwicklungsprojekten",
+      },
+      {
+        skill: "Vue.js",
+        text: "Frontend-Entwicklung mit Vue 3 Composition API",
+      },
+      {
+        skill: "SEO",
+        text: "Planung, Korrespondenz und Umsetzung von technical SEO",
+      },
       { skill: "TypeScript", text: "Durchgehende Typisierung im Full-Stack" },
-      { skill: ".NET", text: "Backend-Entwicklung mit .NET" },
-      { skill: "Docker", text: "Containerisierung und Deployment" },
-      { skill: "Prompting", text: "KI-gestütztes Prompting im Entwicklungsprozess" },
+      { skill: "C#", text: "Backend-Entwicklung mit .NET" },
+      { skill: "Docker", text: "Containerisierung" },
+      { skill: "MS SQL", text: "Datenbank" },
+      {
+        skill: "Prompting",
+        text: "KI-gestütztes Prompting im Entwicklungsprozess",
+      },
+      {
+        skill: "Software Architektur",
+        text: "Durchsetzung eigener Ideen bis hin zur Implementierung",
+      },
     ],
   },
   {
@@ -37,7 +56,14 @@ export const experiences: ExperienceItem[] = [
     ],
     skillRefs: [
       { skill: "CI/CD", text: "Pipeline-Design und -Wartung" },
-      { skill: "PowerShell", text: "Automatisierung von Infrastrukturprozessen" },
+      {
+        skill: "PowerShell",
+        text: "Automatisierung von Infrastrukturprozessen",
+      },
+      {
+        skill: "vSphere",
+        text: "Verwaltung und Betrieb virtueller Infrastruktur",
+      },
       { skill: "Python", text: "Scripting und Tooling-Automatisierung" },
       { skill: "REST APIs", text: "API-Entwicklung und -Integration" },
     ],

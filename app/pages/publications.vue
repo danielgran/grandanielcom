@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SectionHeader description="Akademische Arbeiten und Veröffentlichungen">Publikationen</SectionHeader>
+    <SectionHeader description="Akademische Arbeiten und Veröffentlichungen">
+      Publikationen
+    </SectionHeader>
 
     <ul class="space-y-4">
       <li
@@ -16,9 +18,15 @@
             />
           </div>
           <div class="flex-1 min-w-0">
-            <h3 class="text-base font-semibold text-gray-900">{{ pub.title }}</h3>
-            <p class="text-xs text-gray-400 mt-0.5 mb-2">{{ pub.subtitle }}</p>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">{{ pub.description }}</p>
+            <h3 class="text-base font-semibold text-gray-900">
+              {{ pub.title }}
+            </h3>
+            <p class="text-xs text-gray-400 mt-0.5 mb-2">
+              {{ pub.subtitle }}
+            </p>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+              {{ pub.description }}
+            </p>
             <div class="flex flex-wrap gap-2">
               <button
                 class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-accent-50 text-accent-700 hover:bg-accent-100 transition-colors"

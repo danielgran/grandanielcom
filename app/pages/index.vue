@@ -27,7 +27,7 @@
           :src="'/images/image.png'"
           alt="Daniel Gran"
           class="w-40 lg:w-44 aspect-[1/2] rounded-2xl object-cover object-top shadow-md"
-        >
+        />
       </div>
     </div>
 
@@ -79,7 +79,9 @@
           <span class="font-medium">Deutsch</span>
           <span class="text-gray-400">— Muttersprache</span>
         </div>
-        <div class="text-gray-300">|</div>
+        <div class="text-gray-300">
+          |
+        </div>
         <div class="flex items-center gap-2 text-sm text-gray-600">
           <span class="font-medium">Englisch</span>
           <span class="text-gray-400">— Verhandlungssicher</span>

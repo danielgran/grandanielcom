@@ -3,6 +3,7 @@ export enum SkillCategory {
   Frameworks = "frameworks",
   Databases = "databases",
   DevOps = "devops",
+  APIs = "apis",
   IDEs = "ides",
   Engineering = "engineering",
   Science = "science",
@@ -20,7 +21,6 @@ export interface SkillReference {
 export interface WorkSkillData {
   name: string
   icon?: string
-  level?: string
   percentage?: number
   category: SkillCategory
   /** Alternative tag names this skill matches against (e.g. "C" for "C / C++") */
@@ -30,7 +30,6 @@ export interface WorkSkillData {
 export class WorkSkill {
   readonly name: string;
   readonly icon?: string;
-  readonly level?: string;
   readonly percentage?: number;
   readonly category: SkillCategory;
   readonly matchTags: readonly string[];
@@ -39,7 +38,6 @@ export class WorkSkill {
   constructor(data: WorkSkillData) {
     this.name = data.name;
     this.icon = data.icon;
-    this.level = data.level;
     this.percentage = data.percentage;
     this.category = data.category;
     this.matchTags = data.matchTags ?? [];
@@ -50,15 +48,15 @@ export class WorkSkill {
   matches(tag: string): boolean {
     const lower = tag.toLowerCase();
     return (
-      this.name.toLowerCase() === lower
-      || this.matchTags.some(t => t.toLowerCase() === lower)
+      this.name.toLowerCase() === lower ||
+      this.matchTags.some((t) => t.toLowerCase() === lower)
     );
   }
 
   addReference(ref: SkillReference): void {
     // avoid duplicates
     const exists = this.references.some(
-      r => r.project === ref.project && r.title === ref.title,
+      (r) => r.project === ref.project && r.title === ref.title,
     );
     if (!exists) {
       this.references.push(ref);

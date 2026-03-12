@@ -1,12 +1,14 @@
 <template>
   <div>
-    <SectionHeader description="Zertifizierungen und nennenswerte Erfolge">Erfolge</SectionHeader>
+    <SectionHeader description="Zertifizierungen und nennenswerte Erfolge">
+      Erfolge
+    </SectionHeader>
 
     <ul class="thread">
       <ThreadItem
         title="Berechtigung zur Führung der Berufsbezeichnung Ingenieur"
         date="2024"
-        description="Gem. Art. 1 Abs. 2 BayIngG — Berechtigung zur Führung der Berufsbezeichnung ‚Ingenieur' auf Grundlage des Bachelorabschlusses in Elektro- und Informationstechnik."
+        description="Gem. Art. 2 Abs. 1 BayIngG — Berechtigung zur Führung der Berufsbezeichnung ‚Ingenieur'."
       />
       <ThreadItem
         title="Bachelor of Engineering"

@@ -6,7 +6,9 @@
     <div class="timeline-marker" />
     <div>
       <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-1">
-        <h3 class="text-base lg:text-lg font-semibold text-gray-900">{{ title }}</h3>
+        <h3 class="text-base lg:text-lg font-semibold text-gray-900">
+          {{ title }}
+        </h3>
         <span
           v-if="date"
           class="text-xs font-medium text-accent-600 bg-accent-50 px-2.5 py-0.5 rounded-full whitespace-nowrap"
@@ -38,13 +40,15 @@
         </li>
       </ul>
       <div
-        v-if="tags?.length"
+        v-if="skillRefs?.length"
         class="flex flex-wrap gap-1.5 mt-2"
       >
         <TagPill
-          v-for="tag in tags"
-          :key="tag"
-          :label="tag"
+          v-for="ref in skillRefs"
+          :key="ref.skill"
+          :label="ref.skill"
+          :score="getScore(ref.skill)"
+          :tooltip="ref.text"
         />
       </div>
     </div>
@@ -52,6 +56,9 @@
 </template>
 
 <script setup lang="ts">
+import { skillCategories } from "~/data/skills";
+import type { SkillRef } from "~/data/skills";
+
 defineProps<{
   id?: string
   title: string
@@ -59,6 +66,24 @@ defineProps<{
   date?: string
   description?: string
   items?: string[]
-  tags?: string[]
+  skillRefs?: SkillRef[]
 }>();
+
+const skillPercentageMap = new Map<string, number>();
+for (const cat of skillCategories) {
+  for (const skill of cat.skills) {
+    if (skill.percentage != null) {
+      skillPercentageMap.set(skill.name.toLowerCase(), skill.percentage);
+      if (skill.matchTags) {
+        for (const tag of skill.matchTags) {
+          skillPercentageMap.set(tag.toLowerCase(), skill.percentage);
+        }
+      }
+    }
+  }
+}
+
+function getScore(tag: string): number | undefined {
+  return skillPercentageMap.get(tag.toLowerCase());
+}
 </script>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SectionHeader description="Ausgewählte Projekte und akademische Arbeiten">Projekte</SectionHeader>
+    <SectionHeader description="Ausgewählte Projekte und akademische Arbeiten">
+      Projekte
+    </SectionHeader>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <ProjectCard
@@ -12,7 +14,7 @@
         :icon="proj.icon"
         :description="proj.description"
         :items="proj.items"
-        :tags="proj.skillRefs.map(r => r.skill)"
+        :skill-refs="proj.skillRefs"
         :link="proj.link"
       />
     </div>

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SectionHeader description="Berufliche Stationen und Tätigkeiten">Berufserfahrung</SectionHeader>
+    <SectionHeader description="Berufliche Stationen und Tätigkeiten">
+      Berufserfahrung
+    </SectionHeader>
 
     <ul class="timeline">
       <TimelineItem
@@ -11,7 +13,7 @@
         :subtitle="exp.subtitle"
         :date="exp.date"
         :items="exp.items"
-        :tags="exp.skillRefs.map(r => r.skill)"
+        :skill-refs="exp.skillRefs"
       />
     </ul>
   </div>

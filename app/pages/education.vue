@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SectionHeader description="Akademischer Werdegang und Qualifikationen">Ausbildung</SectionHeader>
+    <SectionHeader description="Akademischer Werdegang und Qualifikationen">
+      Ausbildung
+    </SectionHeader>
 
     <ul class="timeline">
       <TimelineItem

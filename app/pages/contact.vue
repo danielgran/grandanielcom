@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SectionHeader description="So erreichen Sie mich">Kontakt</SectionHeader>
+    <SectionHeader description="So erreichen Sie mich">
+      Kontakt
+    </SectionHeader>
 
     <div class="space-y-6">
       <!-- Kontaktoptionen -->
@@ -45,8 +47,12 @@
             />
           </div>
           <div>
-            <p class="text-sm font-semibold text-gray-900">Standort</p>
-            <p class="text-sm text-gray-500">90547 Stein</p>
+            <p class="text-sm font-semibold text-gray-900">
+              Standort
+            </p>
+            <p class="text-sm text-gray-500">
+              90547 Stein
+            </p>
           </div>
         </div>
 

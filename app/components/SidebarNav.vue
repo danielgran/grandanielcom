@@ -9,14 +9,18 @@
           alt="Daniel Gran, B. Eng."
           class="w-full h-full object-cover"
           @error="imgError = true"
-        >
+        />
         <span
           v-else
           class="text-2xl font-bold text-gray-400 select-none"
         >DG</span>
       </div>
-      <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wider">Daniel Gran, B. Eng.</h2>
-      <p class="text-sm text-accent-600 font-medium mt-1">Software Engineer</p>
+      <h2 class="text-lg font-bold text-gray-900 uppercase tracking-wider">
+        Daniel Gran, B. Eng.
+      </h2>
+      <p class="text-sm text-accent-600 font-medium mt-1">
+        Software Engineer
+      </p>
     </div>
 
     <!-- Divider -->
@@ -33,8 +37,8 @@
             :to="link.to"
             class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors"
             :class="isActive(link.to)
-              ? 'bg-accent-50 text-accent-700 border-l-[3px] border-accent-600'
-              : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'"
+              ? (link.highlight ? 'bg-yellow-50 text-yellow-700 border-l-[3px] border-yellow-500' : 'bg-accent-50 text-accent-700 border-l-[3px] border-accent-600')
+              : (link.highlight ? 'text-yellow-600 hover:bg-yellow-50 hover:text-yellow-800' : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900')"
             @click="$emit('navigate')"
           >
             <Icon
@@ -103,9 +107,9 @@ const imgError = ref(false);
 
 const navLinks = [
   { to: "/", label: "Über mich", icon: "mdi:account-outline" },
+  { to: "/skills", label: "Kenntnisse", icon: "mdi:code-tags", highlight: true },
   { to: "/experience", label: "Berufserfahrung", icon: "mdi:briefcase-outline" },
   { to: "/education", label: "Ausbildung", icon: "mdi:school-outline" },
-  { to: "/skills", label: "Kenntnisse", icon: "mdi:code-tags" },
   { to: "/projects", label: "Projekte", icon: "mdi:folder-outline" },
   { to: "/achievements", label: "Erfolge", icon: "mdi:trophy-outline" },
   { to: "/hobbies", label: "Hobbys", icon: "mdi:heart-outline" },

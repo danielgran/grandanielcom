@@ -16,9 +16,12 @@
       </div>
       <div class="flex-1 min-w-0">
         <div class="flex items-center gap-1.5">
-          <h3 class="text-sm font-semibold text-gray-900 mb-1">{{ skill.name }}</h3>
+          <h3 class="text-sm font-semibold text-gray-900 mb-1">
+            {{ skill.name }}
+          </h3>
           <span
             v-if="skill.hasReferences"
+
             class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-accent-100 text-accent-700 text-[10px] font-bold leading-none mb-1"
           >
             {{ skill.references.length }}
@@ -30,10 +33,10 @@
           />
         </div>
         <p
-          v-if="skill.level"
+          v-if="level"
           class="text-xs text-gray-500 mb-2"
         >
-          {{ skill.level }}
+          {{ level }}
         </p>
         <div
           v-if="skill.percentage != null"
@@ -41,7 +44,7 @@
         >
           <div
             class="skill-progress-fill"
-            :style="{ width: skill.percentage + '%' }"
+            :style="{ width: skill.percentage + '%', background: barColor }"
           />
         </div>
       </div>
@@ -56,22 +59,24 @@
       </p>
       <ul class="space-y-2">
         <li
-          v-for="(ref, i) in skill.references"
+          v-for="(skillRef, i) in skill.references"
           :key="i"
           class="skill-reference-item"
         >
           <Icon
-            :name="ref.project ? 'mdi:folder-outline' : 'mdi:briefcase-outline'"
+            :name="skillRef.project ? 'mdi:folder-outline' : 'mdi:briefcase-outline'"
             class="w-3.5 h-3.5 text-accent-500 shrink-0 mt-0.5"
           />
           <div class="min-w-0 flex-1">
-            <p class="text-xs text-gray-600 leading-relaxed">{{ ref.text }}</p>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              {{ skillRef.text }}
+            </p>
             <NuxtLink
-              :to="ref.link"
+              :to="skillRef.link"
               class="inline-flex items-center gap-1 text-[11px] font-medium text-accent-600 hover:text-accent-800 transition-colors"
               @click.stop
             >
-              {{ ref.title }}
+              {{ skillRef.title }}
               <Icon
                 name="mdi:arrow-right"
                 class="w-3 h-3"
@@ -85,12 +90,18 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import type { WorkSkill } from "~/types/WorkSkill";
+import { useSkillColor } from "~/composables/useSkillColor";
+import { resolveSkillLevel } from "~/data/skills";
 
 const props = defineProps<{
   skill: WorkSkill
 }>();
+
+const { barColor } = useSkillColor(() => props.skill.percentage);
+
+const level = computed(() => resolveSkillLevel(props.skill.percentage));
 
 const expanded = ref(false);
 
@@ -123,7 +134,6 @@ function toggle() {
 
 .skill-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #6366f1, #818cf8);
   border-radius: 9999px;
   transition: width 0.6s ease;
 }

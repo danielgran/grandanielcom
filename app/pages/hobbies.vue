@@ -1,6 +1,8 @@
 <template>
   <div>
-    <SectionHeader description="Was ich in meiner Freizeit mache">Hobbys</SectionHeader>
+    <SectionHeader description="Was ich in meiner Freizeit mache">
+      Hobbys
+    </SectionHeader>
 
     <ul class="thread">
       <ThreadItem

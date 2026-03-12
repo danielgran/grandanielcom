@@ -14,7 +14,9 @@
         />
       </div>
       <div>
-        <h3 class="text-base font-semibold text-gray-900">{{ title }}</h3>
+        <h3 class="text-base font-semibold text-gray-900">
+          {{ title }}
+        </h3>
         <p
           v-if="subtitle"
           class="text-xs text-gray-400 mt-0.5"
@@ -41,38 +43,43 @@
       </li>
     </ul>
     <div
-      v-if="tags?.length"
+      v-if="skillRefs?.length"
       class="flex flex-wrap gap-1.5"
     >
       <TagPill
-        v-for="tag in tags"
-        :key="tag"
-        :label="tag"
+        v-for="ref in skillRefs"
+        :key="ref.skill"
+        :label="ref.skill"
+        :tooltip="ref.text"
       />
     </div>
     <div
       v-if="link"
       class="mt-3 pt-3 border-t border-gray-100"
     >
-      <NuxtLink
-        :to="link"
+      <a
+        :href="link"
+        target="_blank"
+        rel="noopener noreferrer dofollow"
         class="inline-flex items-center gap-1 text-xs font-medium text-accent-600 hover:text-accent-800 transition-colors"
       >
         <Icon
           name="mdi:file-document-outline"
           class="w-3.5 h-3.5"
         />
-        Zur Publikation
+        Mehr erfahren
         <Icon
           name="mdi:arrow-right"
           class="w-3 h-3"
         />
-      </NuxtLink>
+      </a>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import type { SkillRef } from "~/data/skills";
+
 defineProps<{
   id?: string
   title: string
@@ -80,7 +87,7 @@ defineProps<{
   description?: string
   icon?: string
   items?: string[]
-  tags?: string[]
+  skillRefs?: SkillRef[]
   link?: string
 }>();
 </script>
