@@ -18,6 +18,10 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/assets/scss/main.scss"],
+
+  site: {
+    url: "https://grandaniel.com",
+  },
   compatibilityDate: "2024-04-03",
 
   typescript: {
@@ -31,4 +35,5 @@ export default defineNuxtConfig({
   icon: {
     serverBundle: "remote",
   },
+
 });
