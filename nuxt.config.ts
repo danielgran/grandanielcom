@@ -20,7 +20,7 @@ export default defineNuxtConfig({
   css: ["~/assets/scss/main.scss"],
 
   site: {
-    url: "https://grandaniel.com",
+    url: "https://www.grandaniel.com",
   },
   compatibilityDate: "2024-04-03",
 
