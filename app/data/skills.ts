@@ -104,6 +104,12 @@ export const skillCategories = defineSkillCategories([
         category: SkillCategory.Databases,
       },
       {
+        name: "SQLite",
+        icon: "mdi:database",
+        percentage: 70,
+        category: SkillCategory.Databases,
+      },
+      {
         name: "Redis",
         icon: "mdi:memory",
         percentage: 65,
@@ -131,6 +137,12 @@ export const skillCategories = defineSkillCategories([
         name: "Medusa.js",
         icon: "mdi:store",
         percentage: 95,
+        category: SkillCategory.APIs,
+      },
+      {
+        name: "MikroORM",
+        icon: "mdi:database-edit",
+        percentage: 70,
         category: SkillCategory.APIs,
       },
       {
