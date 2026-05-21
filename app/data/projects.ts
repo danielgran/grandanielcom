@@ -12,6 +12,27 @@ export interface ProjectItem {
 
 export const projects: ProjectItem[] = [
   {
+    title: "fitness.grandaniel.com",
+    subtitle: "Privates Projekt",
+    icon: "mdi:dumbbell",
+    description:
+      "UX-optimierter, minimalistischer Fitness-Tracker mit Fokus auf eine schnelle und intuitive Erfassung von Trainingseinheiten und Fortschritten.",
+    items: [
+      "Einfache und schnelle Erfassung von Trainingseinheiten",
+      "Übersichtliche Darstellung von Fortschritten und Statistiken",
+      "Persistente Datenhaltung mit SQLite via MikroORM",
+      "Vollständig typisiertes Full-Stack mit Nuxt und TypeScript",
+    ],
+    skillRefs: [
+      { skill: "Vue.js", text: "Frontend-Entwicklung der Fitness-Tracking-App" },
+      { skill: "Nuxt", text: "Full-Stack-Framework mit SSR und API-Routes" },
+      { skill: "TypeScript", text: "Durchgehende Typisierung im Full-Stack" },
+      { skill: "SQLite", text: "Leichtgewichtige persistente Datenhaltung" },
+      { skill: "MikroORM", text: "ORM für typsicheren Datenbankzugriff" },
+    ],
+    link: "https://fitness.grandaniel.com",
+  },
+  {
     title: "heartbeat.systems Serverhosting",
     subtitle: "Serverhosting-Dienst",
     icon: "mdi:react",
